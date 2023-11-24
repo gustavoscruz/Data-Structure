@@ -33,6 +33,13 @@ public class Vetor {
         return this.size;
     }
 
+    public String search(int key){
+        if(!(key >= 0 && key < this.size)){
+            throw new IllegalArgumentException("Posição Inválida");
+        }
+        return elements[key];
+    }
+
     @Override
     public String toString() {
         StringBuilder s = new StringBuilder();

@@ -10,7 +10,6 @@ public class Main {
         vetor.add("elemento2");
         vetor.add("elemento3");
 
-        System.out.println(vetor.size());
-        System.out.println(vetor);
+        System.out.println(vetor.search(2));
     }
 }
