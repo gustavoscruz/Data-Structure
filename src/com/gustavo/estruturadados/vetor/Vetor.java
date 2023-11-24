@@ -1,5 +1,7 @@
 package com.gustavo.estruturadados.vetor;
 
+import java.util.Arrays;
+
 public class Vetor {
     private String[] elements;
     private int size;
@@ -27,4 +29,25 @@ public class Vetor {
         return false;
     }
 
+    public int size(){
+        return this.size;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder s = new StringBuilder();
+        s.append("[");
+
+        for (int i = 0; i < this.size - 1; i++){
+            s.append(this.elements[i]);
+            s.append(", ");
+        }
+        if(this.size > 0){
+            s.append(this.elements[this.size - 1]);
+        }
+
+        s.append("]");
+
+        return s.toString();
+    }
 }
