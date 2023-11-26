@@ -40,6 +40,15 @@ public class Vetor {
         return elements[key];
     }
 
+    public int search(String element){
+        for(int i = 0; i < size; i++){
+            if(elements[i].equals(element)){
+                return i;
+            }
+        }
+        return -1;
+    }
+
     @Override
     public String toString() {
         StringBuilder s = new StringBuilder();
