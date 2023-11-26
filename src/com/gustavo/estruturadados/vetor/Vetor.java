@@ -21,6 +21,7 @@ public class Vetor {
     }*/
 
     public boolean add(String element) {
+        increaseCapacity();
         if(this.size < elements.length){
             elements[this.size] = element;
             this.size++;
@@ -34,12 +35,24 @@ public class Vetor {
             throw new IllegalArgumentException("Posição Inválida");
         }
 
+        increaseCapacity();
+
         for(int i = size - 1; i >= key; i--){
             elements[i+1] = elements[i];
         }
 
         elements[key] = element;
         size++;
+    }
+
+    private void increaseCapacity(){
+        if(size == elements.length){
+            String[] newElements = new String[elements.length * 2];
+            for(int i = 0; i < elements.length; i++){
+                newElements[i] = elements[i];
+            }
+            elements = newElements;
+        }
     }
 
     public int size(){
