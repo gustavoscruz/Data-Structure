@@ -29,6 +29,19 @@ public class Vetor {
         return false;
     }
 
+    public void add(int key, String element){
+        if(!(key >= 0 && key < this.size)){
+            throw new IllegalArgumentException("Posição Inválida");
+        }
+
+        for(int i = size - 1; i >= key; i--){
+            elements[i+1] = elements[i];
+        }
+
+        elements[key] = element;
+        size++;
+    }
+
     public int size(){
         return this.size;
     }
