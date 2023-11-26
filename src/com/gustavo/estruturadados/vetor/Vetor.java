@@ -45,6 +45,16 @@ public class Vetor {
         size++;
     }
 
+    public void remove(int key){
+        if(!(key >= 0 && key < this.size)){
+            throw new IllegalArgumentException("Posição Inválida");
+        }
+        for(int i = key; i < elements.length -1; i++){
+            elements[i] = elements[i + 1];
+        }
+        size--;
+    }
+
     private void increaseCapacity(){
         if(size == elements.length){
             String[] newElements = new String[elements.length * 2];

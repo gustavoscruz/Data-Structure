@@ -12,6 +12,10 @@ public class Main {
         vetor.add("d");
 
         System.out.println(vetor);
-        System.out.println(vetor.size());
+
+        vetor.remove(2);
+
+        System.out.println(vetor);
+
     }
 }
