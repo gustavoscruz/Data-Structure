@@ -79,6 +79,15 @@ public class Lista<T> {
         return search(element) > -1;
     }
 
+    public int lastIndexOf(T element){
+        for (int i = size - 1; i >= 0; i--){
+            if(elements[i].equals(element)){
+                return i;
+            }
+        }
+        return -1;
+    }
+
     @Override
     public String toString() {
         StringBuilder s = new StringBuilder();

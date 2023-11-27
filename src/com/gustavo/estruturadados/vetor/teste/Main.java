@@ -10,10 +10,9 @@ public class Main {
         lista.add("A");
         lista.add("B");
         lista.add("C");
+        lista.add("A");
 
-        System.out.println(lista.contains("A"));
-        System.out.println(lista.contains("B"));
-        System.out.println(lista.contains("E"));;
+        System.out.println(lista.lastIndexOf("A"));
 
     }
 }
