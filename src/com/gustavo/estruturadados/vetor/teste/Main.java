@@ -14,18 +14,9 @@ public class Main {
 
         System.out.println(lista);
 
-        lista.remove("B");
+        lista.clear();
 
         System.out.println(lista);
-
-        lista.remove("A");
-
-        System.out.println(lista);
-
-        lista.remove("A");
-
-        System.out.println(lista);
-
 
 
     }

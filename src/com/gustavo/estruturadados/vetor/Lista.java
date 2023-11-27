@@ -68,7 +68,11 @@ public class Lista<T> {
         return this.size;
     }
 
-    public Object search(int key){
+    public T get(int key){
+        return search(key);
+    }
+
+    public T search(int key){
         if(!(key >= 0 && key < this.size)){
             throw new IllegalArgumentException("Posição Inválida");
         }
@@ -95,6 +99,13 @@ public class Lista<T> {
             }
         }
         return -1;
+    }
+
+    public void clear(){
+        for (int i = 0; i < size; i++){
+            elements[i] = null;
+        }
+        size = 0;
     }
 
     @Override
