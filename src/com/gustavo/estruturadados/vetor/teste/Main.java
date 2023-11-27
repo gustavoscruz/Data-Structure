@@ -6,9 +6,14 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList<Integer> arrayList = new ArrayList<>();
-        arrayList.add(55);
-        System.out.println(arrayList.get(1));
+        Lista<String> lista = new Lista<>(5);
+        lista.add("A");
+        lista.add("B");
+        lista.add("C");
+
+        System.out.println(lista.contains("A"));
+        System.out.println(lista.contains("B"));
+        System.out.println(lista.contains("E"));;
 
     }
 }

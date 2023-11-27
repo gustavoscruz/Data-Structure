@@ -75,6 +75,10 @@ public class Lista<T> {
         return -1;
     }
 
+    public boolean contains(T element){
+        return search(element) > -1;
+    }
+
     @Override
     public String toString() {
         StringBuilder s = new StringBuilder();
