@@ -45,6 +45,15 @@ public class Lista<T> {
         size--;
     }
 
+    public void remove(T element){
+
+        int pos = search(element);
+
+        if(pos > -1){
+            remove(pos);
+        }
+    }
+
     private void increaseCapacity(){
         if(size == elements.length){
             T[] newElements = (T[]) new Object[elements.length * 2];

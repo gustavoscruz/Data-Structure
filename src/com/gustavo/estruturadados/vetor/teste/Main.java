@@ -12,7 +12,21 @@ public class Main {
         lista.add("C");
         lista.add("A");
 
-        System.out.println(lista.lastIndexOf("A"));
+        System.out.println(lista);
+
+        lista.remove("B");
+
+        System.out.println(lista);
+
+        lista.remove("A");
+
+        System.out.println(lista);
+
+        lista.remove("A");
+
+        System.out.println(lista);
+
+
 
     }
 }
